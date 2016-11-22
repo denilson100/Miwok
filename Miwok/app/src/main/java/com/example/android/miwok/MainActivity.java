@@ -19,20 +19,79 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+
+        // Mostra a categoria numeros da view
+        TextView numbers = (TextView) findViewById(R.id.numbers);
+
+        // Seta o clickListener para a view
+        numbers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Cria intent para abrir o link {@link NumbersActivity}
+                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+
+                // Inicia a nova activity
+                startActivity(numbersIntent);
+            }
+        });
+
+        // Mostra a categoria family da view
+        TextView family = (TextView) findViewById(R.id.family);
+
+        // Seta o clickListener para a view
+        family.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Cria intent para abrir o link {@link Activity}
+                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+
+                // Inicia a nova activity
+                startActivity(familyIntent);
+            }
+        });
+
+        // Mostra a categoria colors da view
+        TextView colors = (TextView) findViewById(R.id.colors);
+
+        // Seta o clickListener para a view
+        colors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Cria intent para abrir o link {@link ColorsActivity}
+                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
+
+                // Inicia a nova activity
+                startActivity(colorsIntent);
+            }
+        });
+
+        // Mostra a categoria frases da view
+        TextView frases = (TextView) findViewById(R.id.phrases);
+
+        // Seta o clickListener para a view
+        frases.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Cria intent para abrir o link {@link PhrasesActivity}
+                Intent frasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
+
+                // Inicia a nova activity
+                startActivity(frasesIntent);
+            }
+        });
     }
 
-    public void numbers(View view){
-
-        Intent i = new Intent(this, NumbersActivity.class);
-        startActivity(i);
-    }
 }
