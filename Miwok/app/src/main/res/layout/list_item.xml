@@ -5,8 +5,7 @@
     android:minHeight="@dimen/list_item_height"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tan_background"
-    >
+    android:background="@color/tan_background">
 
     <ImageView
         android:id="@+id/list_image_icon"
@@ -41,4 +40,9 @@
             android:textColor="@android:color/white"
             tools:text="one" />
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height" />
+
 </LinearLayout>
